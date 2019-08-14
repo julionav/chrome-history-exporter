@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const SearchIcon = () => (
   <svg
@@ -16,9 +17,10 @@ const SearchIcon = () => (
   </svg>
 );
 
-const SearchInput = () => {
+const SearchInput = ({ className }) => {
+  className = classNames(className, "bg-light py-3 px-2 flex rounded");
   return (
-    <div className="bg-light py-3 px-2 flex rounded">
+    <div className={className}>
       <SearchIcon />
       <input
         type="text"
