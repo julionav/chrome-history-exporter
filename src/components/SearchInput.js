@@ -17,7 +17,7 @@ const SearchIcon = () => (
   </svg>
 );
 
-const SearchInput = ({ className }) => {
+const SearchInput = ({ className, ...rest }) => {
   className = classNames(className, "bg-light py-3 px-2 flex rounded");
   return (
     <div className={className}>
@@ -26,6 +26,7 @@ const SearchInput = ({ className }) => {
         type="text"
         className="appearance-none rounded bg-light text-gray-700 w-full focus:outline-none"
         placeholder="Search history"
+        {...rest}
       />
     </div>
   );
